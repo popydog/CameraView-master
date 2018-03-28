@@ -1,6 +1,6 @@
 # CameraView
 
-*This is a preview release. The API is subject to change.*
+*这是一个基于google camerview改造的一个相机demo  能够通过计算 截取到指定位置的图片并保存.*
 
 This is not an official Google product.
 
