@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.cameraview.CameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
+
+        <com.troy.cameralib.view.MaskView
+            android:id="@+id/view_mask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maskview_area_bg_alpha="0"
+            app:maskview_area_bg_color="@android:color/white"
+            app:maskview_line_alpha="100"
+            app:maskview_line_color="@android:color/holo_red_light"
+            app:maskview_line_stroke="2dp"/>
+
+        <ImageView
+            android:id="@+id/biankuang"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@mipmap/biakuang"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black3"
+      >
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:padding="10dp"
+            android:src="@mipmap/icon_big_white_down_arrow"/>
+
+        <ImageButton
+            android:id="@+id/ibt_capture"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/icon_capture"/>
+
+        <ImageView
+            android:id="@+id/showpic"
+            android:clickable="true"
+            android:visibility="visible"
+            android:layout_above="@id/ibt_capture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</RelativeLayout>
