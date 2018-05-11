@@ -32,7 +32,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="60dp"
-            android:background="@mipmap/biakuang"/>
+            android:background="@mipmap/biankuang"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -41,7 +41,7 @@
         android:layout_height="200dip"
         android:layout_alignParentBottom="true"
         android:background="@color/black3"
-      >
+        >
 
         <ImageView
             android:id="@+id/iv_return"
@@ -59,15 +59,27 @@
             android:layout_centerInParent="true"
             android:background="@mipmap/icon_capture"/>
 
+        <TextView
+            android:id="@+id/lighttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ibt_capture"
+            android:layout_alignBottom="@id/ibt_capture"
+            android:layout_marginLeft="10dip"
+            android:text="1111"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"/>
+
         <ImageView
             android:id="@+id/showpic"
-            android:clickable="true"
-            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@id/ibt_capture"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dip"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:clickable="true"
+            android:visibility="visible"/>
     </RelativeLayout>
 
 </RelativeLayout>

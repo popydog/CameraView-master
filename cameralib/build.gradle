@@ -1,8 +1,9 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+
 
 
     defaultConfig {
@@ -12,6 +13,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi'//, 'armeabi-v7a'//, 'x86_64', 'arm64-v8a', 'x86'
+        }
 
     }
     buildTypes {
@@ -27,6 +33,17 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+repositories {
+    maven {
+        url 'https://google.bintray.com/tensorflow'
+    }
 }
 
 dependencies {
@@ -34,11 +51,16 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    compile "com.android.support:exifinterface:26.+"
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
-    compile 'fr.tvbarthel.blurdialogfragment:lib:2.1.5'
+
     //google的CameraView
     compile(name: 'camera-library', ext: 'aar')
 
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:exifinterface:26.+'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'org.tensorflow:tensorflow-android:1.5.0'
+    compile 'org.tensorflow:tensorflow-android:+'
+    compile project(':autolayout')
 }

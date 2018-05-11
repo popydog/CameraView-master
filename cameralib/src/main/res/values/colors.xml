@@ -11,7 +11,7 @@
     <color name="black3">#999898</color>
     <color name="red">#FF0000</color>
     <color name="bg_gray">#F6F5F4</color>
-    <color name="transparent">#00000000</color>
+    <color name="transparent">#000000</color>
     <color name="golden">#A16708</color>
     <color name="pink">#FEEFC9</color>
 </resources>

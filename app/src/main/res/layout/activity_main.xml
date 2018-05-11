@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="number"
+        android:visibility="gone"
         android:layout_centerInParent="true"
         android:hint="设置二值化程度0-255,默认100"
         />

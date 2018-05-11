@@ -4,24 +4,20 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.troy.cameralib.AutoActivity;
 import com.troy.cameralib.EasyCamera;
 import com.troy.cameralib.util.DisplayUtil;
-
-import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "摄像机的参数";
     private Button btnCapture;
     private ImageView ivImage;
-    private EditText edittext;
     private int screenWidth;
     private float ratio = 0.1f; //取景框高宽比
 
@@ -30,18 +26,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ivImage = (ImageView) findViewById(R.id.iv_image);
-        edittext = (EditText) findViewById(R.id.edittext);
         btnCapture = (Button) findViewById(R.id.btn_capture);
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String SAMPLE_CROPPED_IMAGE_NAME = "cropImage_" + System.currentTimeMillis() + ".png";
-                Uri destination = Uri.fromFile(new File(getCacheDir(), SAMPLE_CROPPED_IMAGE_NAME));
-                EasyCamera.create(destination)
-                        .withViewRatio(ratio)
-                        .SetTmp(Integer.parseInt(TextUtils.isEmpty(edittext.getText()) ? "100" : edittext.getText().toString()))
-                        .withMarginCameraEdge((int) DisplayUtil.dp2px(MainActivity.this, 150), (int) DisplayUtil.dp2px(MainActivity.this, 100))
-                        .start(MainActivity.this);
+//                String SAMPLE_CROPPED_IMAGE_NAME = "cropImage_" + System.currentTimeMillis() + ".png";
+//                Uri destination = Uri.fromFile(new File(getCacheDir(), SAMPLE_CROPPED_IMAGE_NAME));
+//                EasyCamera.create(destination)
+//                        .withViewRatio(ratio)
+//                        .SetTmp(Integer.parseInt(TextUtils.isEmpty(edittext.getText()) ? "100" : edittext.getText().toString()))
+//                        .withMarginCameraEdge((int) DisplayUtil.dp2px(MainActivity.this, 150), (int) DisplayUtil.dp2px(MainActivity.this, 100))
+//                        .start(MainActivity.this);
+
+               startActivity(new Intent(MainActivity.this, AutoActivity.class));
             }
         });
 
