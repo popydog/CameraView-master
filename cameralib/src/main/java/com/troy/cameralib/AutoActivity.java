@@ -183,7 +183,7 @@ public class AutoActivity extends AppCompatActivity implements View.OnClickListe
     private static final String OUTPUT_NAME = "fyx_dense_decoded";
 
 
-    private static final String MODEL_FILE = "file:///android_asset/frozen_graph0511_mobile.pb";
+    private static final String MODEL_FILE = "file:///android_asset/frozen_graph0517.pb";
     //private static final String MODEL_FILE = "file:///android_asset/frozen_graph2.pb";
 
 
